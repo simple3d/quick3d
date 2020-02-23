@@ -87,7 +87,7 @@ exhale_args = {
     "kindsWithContentsDirectives": ["class", "file", "namespace", "struct"],
     ############################################################################
     # useful to see ;)
-    # "verboseBuild": True
+    "verboseBuild": True
 }
 
 # Tell sphinx what the primary language being documented is.
