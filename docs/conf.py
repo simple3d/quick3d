@@ -56,7 +56,7 @@ exhale_args = {
     "exhaleExecutesDoxygen": True,
     "exhaleDoxygenStdin": textwrap.dedent('''
         # Tell Doxygen where the source code is (yours may be different).
-        INPUT                  = ../include
+        INPUT                  = ../src
         # Doxygen chokes on `NAMESPACE_BEGIN`, predfine all of these
         PREDEFINED            += NAMESPACE_BEGIN(nanogui)="namespace nanogui {"
         PREDEFINED            += NAMESPACE_END(nanogui)="}"
