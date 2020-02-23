@@ -1,3 +1,6 @@
+/// Copyright © 2020 simple3d. All rights reserved.
+/// See LICENSE.txt for details.
+/// \file
 #pragma once
 
 #include <nanogui/canvas.h>
@@ -6,7 +9,7 @@ using nanogui::Shader;
 using nanogui::Canvas;
 using nanogui::ref;
 
-// The 3D window of the application
+/// The 3D window of the application
 class ThreeDWindow : public Canvas {
 public:
     ThreeDWindow(Widget* parent);
