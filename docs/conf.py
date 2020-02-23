@@ -354,6 +354,6 @@ rst_epilog = textwrap.dedent('''
 ))
 
 # auto-magically called by sphinx-build
-def setup(app):
+# def setup(app):
     # this looks in html_static_path (_static directory as set above)
-    app.add_stylesheet("entypo.css")
+    # app.add_stylesheet("entypo.css")
