@@ -41,14 +41,18 @@ exhale_args = {
     # These arguments are required
     "containmentFolder":     "./api",
     "rootFileName":          "library_root.rst",
-    "rootFileTitle":         "Library API",
+    "rootFileTitle":         "quick3d Code Documentation",
+    "afterTitleDescription": "This section contains automatically generated documentation of the quick3d source code.",
     "doxygenStripFromPath":  "..",
     # Suggested optional arguments
     "createTreeView":        True,
     # TIP: if using the sphinx-bootstrap-theme, you need
     # "treeViewIsBootstrap": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin":    "INPUT = ../src",
+    "exhaleDoxygenStdin": textwrap.dedent('''
+        INPUT = ../src
+        EXCLUDE_SYMBOLS = nanogui
+    '''),
     "verboseBuild": True
 }
 

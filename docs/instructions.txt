@@ -1,0 +1,17 @@
+To build the documentation, open a command prompt in the directory containing this file and enter "make html".
+The resulting help documentation will be located in the _build/html/index.html.
+When code is submitted, the documentation will automatically be built the readthedoc.org and available at https://quick3d.readthedocs.io/en/latest/index.html
+
+You can clean the documentation build by doing "make clean"
+
+The code is automatically documented using doxygen style comments.
+
+Information on how this system works can be found at the following URLs:
+The sphinx documentation generator is described here:
+https://www.sphinx-doc.org/en/master/
+
+The automatic generation of documentation from the code's doxygen's comments is described here:
+https://exhale.readthedocs.io/en/latest/index.html
+
+The following is also helpful as the exhale extension builds upon breathe:
+https://breathe.readthedocs.io/en/latest/
