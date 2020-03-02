@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <iostream>
 
-// The main function where execution begins.
+/// \fn The main function where execution begins.
 // Declare an Application object and call Run.
 // Catch exceptions in case problems occur in the constructor or deconstructor.
 int main(int /* argc */, char ** /* argv */) 
