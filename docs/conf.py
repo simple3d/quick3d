@@ -53,6 +53,13 @@ exhale_args = {
         INPUT = ../src
         EXCLUDE_SYMBOLS = nanogui
     '''),
+    ############################################################################
+    # HTML Theme specific configurations.                                      #
+    ############################################################################
+    # Fix broken Sphinx RTD Theme 'Edit on GitHub' links
+    # Search for 'Edit on GitHub' on the FAQ:
+    #     http://exhale.readthedocs.io/en/latest/faq.html
+    "pageLevelConfigMeta": ":github_url: https://github.com/simple3d/quick3d",
     "verboseBuild": True
 }
 
