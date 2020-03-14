@@ -15,6 +15,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- checkout: self
+  clean: true
+  submodules: true
+  lfs: true
+
 - task: CMake@1
   inputs:
     workingDirectory: '.'
