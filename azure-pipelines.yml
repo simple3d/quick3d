@@ -17,7 +17,7 @@ variables:
 steps:
 - checkout: self
   clean: true
-  submodules: true
+  submodules: recursive
   lfs: true
 
 - task: CMake@1
