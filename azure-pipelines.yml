@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'build/quick3d.sln'
+  solution: 'quick3d.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
