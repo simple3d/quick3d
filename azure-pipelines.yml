@@ -16,8 +16,6 @@ variables:
 
 steps:
 - task: CMake@1
-  inputs:
-  workingDirectory: 'build'
 
 - task: NuGetToolInstaller@1
 
