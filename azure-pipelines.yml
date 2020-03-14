@@ -11,7 +11,7 @@ pool:
 
 variables:
   solution: 'quick3d.sln'
-  buildPlatform: 'Any CPU'
+  buildPlatform: 'x64'
   buildConfiguration: 'Release'
 
 steps:
