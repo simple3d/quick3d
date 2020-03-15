@@ -9,8 +9,7 @@
 using namespace nanogui;
 
 MainWindow::MainWindow() : 
-    nanogui::Screen(Vector2i(800, 600), "Quick3D", true),
-    m_serialPort(nullptr)
+    nanogui::Screen(Vector2i(800, 600), "Quick3D", true)
 {
     Window* window = new Window(this, "Quick3D Child Window");
     window->set_position(Vector2i(15, 15));
