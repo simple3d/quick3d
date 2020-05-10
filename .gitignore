@@ -31,3 +31,6 @@
 *.out
 *.app
 build/
+docs/_build/
+docs/api/
+docs/doxygen/
