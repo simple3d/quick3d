@@ -1,6 +1,7 @@
 #pragma once
 
 #include <nanogui/canvas.h>
+#include "Camera.h"
 
 using nanogui::Shader;
 using nanogui::Canvas;
@@ -12,13 +13,13 @@ public:
     /// Constructor
     ThreeDWindow(Widget* parent);
 
-    /// Called to change the rotation.
-    void set_rotation(float rotation);
+    /// Responds to the mouse drag event.
+    virtual bool mouse_drag_event(const Vector2i& p, const Vector2i& rel, int button, int modifiers) override;
 
     /// Called to draw the contents of the 3D view.
     virtual void draw_contents() override;
 
 private:
     ref<Shader> m_shader;
-    float m_rotation;
+    Camera m_camera;
 };

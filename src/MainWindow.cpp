@@ -11,23 +11,32 @@ using namespace nanogui;
 MainWindow::MainWindow() : 
     nanogui::Screen(Vector2i(800, 600), "Quick3D", true)
 {
-    Window* window = new Window(this, "Quick3D Child Window");
-    window->set_position(Vector2i(15, 15));
-    window->set_layout(new GroupLayout());
+    try
+    {
+        Window* window = new Window(this, "Quick3D Child Window");
+        window->set_position(Vector2i(15, 15));
+        window->set_layout(new GroupLayout());
 
-    m_canvas = new ThreeDWindow(window);
-    m_canvas->set_background_color({ 100, 100, 100, 255 });
-    m_canvas->set_size({ 700, 500 });
+        m_canvas = new ThreeDWindow(window);
+        m_canvas->set_background_color({ 100, 100, 100, 255 });
+        m_canvas->set_size({ 700, 500 });
 
-    Widget* tools = new Widget(window);
-    tools->set_layout(new BoxLayout(Orientation::Horizontal,
-        Alignment::Middle, 0, 5));
+        Widget* tools = new Widget(window);
+        tools->set_layout(new BoxLayout(Orientation::Horizontal,
+            Alignment::Middle, 0, 5));
 
-    Button* b0 = new Button(tools, "Connect");
-    b0->set_callback(std::bind(&MainWindow::on_connect, this));
+        Button* b0 = new Button(tools, "Connect");
+        b0->set_callback(std::bind(&MainWindow::on_connect, this));
 
-    Button* b1 = new Button(tools, "Read");
-    b1->set_callback(std::bind(&MainWindow::on_read, this));
+        Button* b1 = new Button(tools, "Read");
+        b1->set_callback(std::bind(&MainWindow::on_read, this));
+    }
+    catch (std::runtime_error err)
+    {
+        printf("Exception: %s\n", err.what());
+        printf("Terminating application.  Press any key to continue.\n");
+        throw err;
+    }
 
     perform_layout();
 }
@@ -57,5 +66,4 @@ void MainWindow::on_connect()
 
 void MainWindow::on_read()
 {
-    m_canvas->set_rotation((float)3.14159 * rand() / (float)RAND_MAX);
 }

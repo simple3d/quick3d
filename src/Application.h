@@ -3,8 +3,15 @@
 /// Encapsulation of the application itself
 /// Declare an Application object and call Run.
 /// Example:
-/// Application myApplication;
-/// myApplication.Run();
+/// @verbatim embed:rst:leading-slashes
+///    .. code-block:: cpp
+///       :linenos:
+///
+///       Application myApplication;
+///       myApplication.Run();
+///
+/// @endverbatim
+///
 class Application
 {
 public:
